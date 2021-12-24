@@ -1,0 +1,323 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+.index-bg-wrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("../images/index-bg/index-bg-mobile.png");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include min-width(1025px) {
+    width: 100%;
+    height: 100%;
+    background: url("../images/index-bg/index-bg.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+	@include max-width(375px) {
+		height: 700px;
+	}
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  > span {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    z-index: 3;
+  }
+}
+
+.index-bg-wrap-topicon-left {
+  top: 18px;
+  left: 18px;
+  background: url("../images/icon/index-focus-tl.svg") no-repeat center/contain;
+
+  @include min-width(1025px) {
+    top: 41px;
+    left: 41px;
+  }
+}
+
+.index-bg-wrap-topicon-right {
+  top: 18px;
+  right: 18px;
+  background: url("../images/icon/index-focus-tr.svg") no-repeat center/contain;
+
+  @include min-width(1025px) {
+    top: 41px;
+    right: 41px;
+  }
+}
+
+.index-bg-wrap-bottomicon-left {
+  bottom: 18px;
+  left: 18px;
+  background: url("../images/icon/index-focus-bl.svg") no-repeat center/contain;
+
+  @include min-width(1025px) {
+    bottom: 41px;
+    left: 41px;
+  }
+}
+
+.index-bg-wrap-bottomicon-right {
+  bottom: 18px;
+  right: 18px;
+  background: url("../images/icon/index-focus-br.svg") no-repeat center/contain;
+
+  @include min-width(1025px) {
+    bottom: 41px;
+    right: 41px;
+  }
+}
+
+.overlay-icon {
+  width: 43px;
+  height: 43px;
+  position: absolute;
+  z-index: 3;
+  display: block;
+}
+
+.index-bg-wrap-topicon-load-left {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+    top: 41px;
+    left: 41px;
+    background: url("../images/icon/index-focus-tl.svg") no-repeat
+      center/contain;
+  }
+}
+
+.index-bg-wrap-topicon-load-right {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+    top: 41px;
+    right: 41px;
+    background: url("../images/icon/index-focus-tr.svg") no-repeat
+      center/contain;
+  }
+}
+
+.index-bg-wrap-bottomicon-load-left {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+    bottom: 41px;
+    left: 41px;
+    background: url("../images/icon/index-focus-bl.svg") no-repeat
+      center/contain;
+  }
+}
+
+.index-bg-wrap-bottomicon-load-right {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+    bottom: 41px;
+    right: 41px;
+    background: url("../images/icon/index-focus-br.svg") no-repeat
+      center/contain;
+  }
+}
+
+.index-bg-wrap-info {
+  width: 300px;
+  height: 364px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -182px;
+  margin-left: -150px;
+  text-align: center;
+  z-index: 10;
+
+  @include min-width(1025px) {
+    width: 760px;
+    height: 400px;
+    margin-top: -300px;
+    margin-left: -380px;
+  }
+
+  > .h2 {
+		margin-top: 50px;
+    margin-bottom: 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: $color-white;
+    @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			margin-top: 18px;
+			font-size: 96px;
+			letter-spacing: 5px;
+		}
+  }
+
+  > .h3 {
+		margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: $color-white;
+    @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			font-size: 48px;
+		}
+  }
+
+  > p {
+		margin-top: 16px;
+    font-size: 12px;
+    font-weight: 300;
+    color: $color-white;
+    @include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			margin-top: 40px;
+			font-size: 28px;
+		}
+  }
+}
+
+.index-bg-wrap-info-label {
+  width: 200px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+  background: url("../images/icon/index-bg-wrap-info.svg") no-repeat
+    center/contain;
+
+		@include min-width(1025px) {
+			width: 330px;
+			height: 45px;
+		}
+}
+
+.index-go-btn {
+  width: 87px;
+  height: 87px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $color-white;
+  border-radius: 50%;
+  color: $color-white;
+  transition: 0.2s;
+
+	@include min-width(1025px) {
+		width: 123px;
+  	height: 123px;
+		margin: 0 auto;
+		margin-top: 35px;
+	}
+
+  &:hover {
+    background-color: $color-white;
+  }
+
+  > span {
+    font-size: 32px;
+    @include roboto-txt;
+
+		@include min-width(1025px) {
+			font-size: 48px;
+		}
+  }
+
+  &:before {
+    content: "";
+    width: 33px;
+    height: 12px;
+    position: absolute;
+    left: -60px;
+    display: block;
+    background: url("../images/icon/index-go-btn-arrow.svg") no-repeat
+      center/contain;
+    transform: scaleX(-1);
+    transition: 0.2s;
+    animation: identifier1 1.3s linear infinite reverse;
+
+    @keyframes identifier1 {
+      0% {
+        left: -70px;
+      }
+      50% {
+        left: -50px;
+      }
+      100% {
+        left: -70px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 33px;
+    height: 12px;
+    position: absolute;
+    right: -60px;
+    display: block;
+    background: url("../images/icon/index-go-btn-arrow.svg") no-repeat
+      center/contain;
+    transition: 0.2s;
+    animation: identifier2 1.3s linear infinite reverse;
+
+    @keyframes identifier2 {
+      0% {
+        right: -70px;
+      }
+      50% {
+        right: -50px;
+      }
+      100% {
+        right: -70px;
+      }
+    }
+  }
+}
+
+.show-text{
+	display: block;
+	margin-top: 70px;
+	font-size: 18px;
+	font-weight: 300;
+	color: $color-white;
+	@include NotoSansTC-txt;
+
+	@include min-width(1025px) {
+		font-size: 28px;
+	}
+}

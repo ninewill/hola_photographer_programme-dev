@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+// * ==========================================================================
+// * 顏色
+// * ==========================================================================
+
+$color-white: #FFFFFF;
+$color-black-light: #2b2b2b;
+$color-black: #3d3d3d;
+$color-black-dark: #161616;
+
+$color-gray: #C9C9C9;
+$color-gray-light: #F3F3F3;
+$color-gray-dark: #4D4D4D;
+
+$color-brown: #AB8F4E;
+$color-brown-light: #C8AB69;
+$color-brown-dark: #8C6A28;
+
+$color-red: #D63B3B;
+$color-red-dark: #AD2C2C;
+
+$color-beige: #EEE8E0;
+
+$color-default: #1A1A1A;
+
+$color-white: #ffffff;
+$color-black: #000000;
+$color-orange: #f87147;
+
+// 主要配色
+$color-primary-1: #0c8166;
+$color-primary-2: #1a1f49;
+$color-primary-3: #e7e4e4;
+
+// FOCUS 時的外框
+$focus-border: 0 0 0 0.2rem rgba($color-orange, 0.5);
+$focus-border-inset: inset 0 0 0 0.2rem rgba($color-orange, 0.8);
+
+// 行動版 HEADER BAR 的高度
+$mainHeader-height: 50px;
+
+// 電腦版 MENU 的高度
+$menu-height: 85px;
+
+// * ==========================================================================
+// * 文字字級大小設定
+// * ==========================================================================
+
+$fontsize: (
+    1: 2.375rem,
+    2: 2.125rem,
+    3: 1.5rem,
+    4: 1.375rem,
+    5: 1.25rem,
+    6: 1.125rem,
+    base: 1rem,
+    small-base: 0.9375rem,
+);
+
+// * ==========================================================================
+// * 預設樣式設定
+// * ==========================================================================
+
+// * Focus時的外框樣式
+@function focusBorder($inside:false, $opacity:0.6) {
+    @if $inside == true {
+        @return inset 0 0 0 0.2rem rgba($color-red, $opacity);
+    } @else {
+        @return 0 0 0 0.2rem rgba($color-red, $opacity);
+    }
+}
+
+// * Hover時的顏色
+$hover-color: $color-brown-light;
+
+// * Header區塊的陰影
+$header-shadow: 0px 3px 10px rgba(87,87,87,0.3);

@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+.fix-btn {
+  display: block;
+  padding: 0.7rem;
+  border: 1px solid $color-white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  top: 13px;
+  right: 13px;
+  z-index: 9;
+
+  @include min-width(1025px) {
+    display: none;
+  }
+
+  > a {
+    display: block;
+    font-size: 12px;
+    color: $color-white;
+    @include NotoSansTC-txt;
+
+    > span {
+      display: block;
+      font-size: 23px;
+    }
+  }
+}
+
+.filter-floatbtn {
+
+	display: none;
+
+	&.filter-floatbtn-white{
+		color: $color-white;
+
+    &:after {
+      content: "";
+      width: 45px;
+      height: 45px;
+      display: block;
+      background: url("../images/icon/filter-floatbtn-white.svg") no-repeat
+        center/contain;
+				transition: 0.2s;
+    }
+	}
+
+  @include min-width(1025px) {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 48px;
+    right: 48px;
+    z-index: 9;
+    color: $color-black;
+
+    > span {
+      margin-right: 1rem;
+      display: block;
+    }
+
+    &:after {
+      content: "";
+      width: 45px;
+      height: 45px;
+      display: block;
+      background: url("../images/icon/filter-floatbtn-black.svg") no-repeat
+        center/contain;
+				transition: 0.2s;
+    }
+
+		&:hover {
+			&:after {
+				background: url("../images/icon/filter-floatbtn-black-hover.svg") no-repeat
+        center/contain;
+			}
+
+			&.filter-floatbtn-white{
+				&:after {
+					background: url("../images/icon/filter-floatbtn-white-hover.svg") no-repeat
+						center/contain;
+				}
+			}
+    }
+  }
+}

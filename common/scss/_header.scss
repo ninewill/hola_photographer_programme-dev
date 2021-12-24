@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+@mixin header($language) {
+  // * ==========================================================================
+  // * HEADER 區塊
+  // * ==========================================================================
+
+  #header {
+    width: 100%;
+    position: relative;
+
+    @include min-width(769px) {
+      height: 100%;
+    }
+  }
+
+  // * ==========================================================================
+  // * LOGO
+  // * ==========================================================================
+
+	.logo-menu {
+    width: 187px;
+    height: 40px;
+    display: block;
+    margin-left: 5px;
+    position: relative;
+
+    > a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      color: $color-white;
+      background: url("../images/icon/logo_white.svg") no-repeat center/contain;
+
+      @include hidetext;
+    }
+
+    @include min-width(1025px) {
+      width: 242px;
+      height: 70px;
+      margin-left: 28px;
+    }
+  }
+
+  // * ==========================================================================
+  // * nav
+  // * ==========================================================================
+
+  nav {
+    width: 48px;
+    height: 100%;
+    padding: 0 0 7vh;
+    padding-top: 5vh;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    background-color: $color-black;
+
+		@include min-width(1025px) {
+			width: 70px;
+		}
+
+    .gnav-main {
+      width: 48px;
+      height: 100%;
+      font-size: 0.875rem;
+
+			@include min-width(1025px) {
+				width: 70px;
+
+				&::before {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 1px;
+					height: 100%;
+					top: 0;
+					left: 69px;
+					background-color: rgba(255, 255, 255, 0.12);
+				}
+			}
+
+      > li {
+				width: 100%;
+        position: relative;
+        display: flex;
+				justify-content: center;
+				align-items: center;
+        margin-top: 40px;
+        vertical-align: bottom;
+        writing-mode: vertical-rl;
+
+				@include min-width(1025px) {
+					display: inline-block;
+				}
+
+        &:after {
+          content: "";
+          display: block;
+          width: 18px;
+          height: 1px;
+          position: absolute;
+          bottom: -56.666%;
+          left: 15px;
+          background-color: $color-white;
+
+					@include min-width(1025px) {
+						left: 26px;
+					}
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+				&.current {
+					>a{
+						>span{
+							color: $color-white;
+							opacity: 0.5;
+						}
+					}
+        }
+
+        @include min-width(1025px) {
+          &:hover {
+						>a{
+							color: $color-white;
+							opacity: 0.5;
+						}
+          }
+        }
+
+        > a {
+					width: 100%;
+          display: flex;
+					justify-content: center;
+					align-items: center;
+          color: $color-white;
+          font-size: map-get($fontsize, small-base);
+					transition: .2s;
+
+					@include min-width(1025px) {
+						display: block;
+						line-height: 70px;
+					}
+
+          > span {
+          }
+        }
+      }
+    }
+  }
+
+  .nav-text {
+
+		@include min-width(1025px) {
+			position: absolute;
+			bottom: 0;
+			left: -12px;
+			z-index: 10001;
+			color: $color-white;
+			opacity: 50%;
+			font-size: map-get($fontsize, 2);
+			writing-mode: vertical-lr;
+			text-orientation: mixed;
+			@include roboto-txt;
+		}
+  }
+}

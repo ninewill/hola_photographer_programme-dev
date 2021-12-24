@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import "./utils/_utils.scss";
+
+//////////////////////////////////
+//RWD Content
+//////////////////////////////////
+
+
+
+//教學
+.top-elm-grid {
+	.s1-item-tech-mobile{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+	
+		@include min-width(1025px) {
+			display: none;
+		}
+		
+		>li{
+
+			>a .img-snip{
+				>figcaption{
+					>h3{
+						opacity: 0.5;
+					}
+				}
+			}
+
+			&.current{
+				>a{
+					>figure{
+						>figcaption{
+							>h3{
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+
+
+		}
+	}
+}
+
+.top-elm-grid-s2-tech-wrap{
+	width: 100%;
+	margin-bottom: 64px;
+
+	@include min-width(1025px) {
+		width: 67%;
+		margin-bottom: 0;
+	}
+
+	@include min-width(1440px) {
+		width: 75%;
+	}
+	.top-elm-grid-s2-tech{
+
+	}
+
+}
+
+
+
+
+
+
+
