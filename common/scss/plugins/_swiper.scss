@@ -686,7 +686,25 @@ button.swiper-pagination-bullet {
 			no-repeat center/contain;
 	}
 }
+//電腦
+.popup-swiper-wrap-pc{
+  display: none;
 
+  @include min-width(1025px) {
+    display: flex;
+  }
+}
+
+.popup-swiper-block-mobile{
+  display: flex;
+
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
+//手機
 .popup-swiper-wrap-mobile{
 	position: relative;
 	background-color: #f2f2f1;
