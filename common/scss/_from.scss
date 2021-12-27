@@ -490,15 +490,15 @@ xpopup
         outline: 0;
       }
 
-      textarea {
-        height: 100px;
-        max-width: 100%;
-        resize: none;
+			textarea {
+				height: 80px;
+				max-width: 100%;
+				resize: none;
 
-        @include min-width(1025px) {
-          height: 150px;
-        }
-      }
+				@include min-width(1025px) {
+					height: 100px;
+				}
+			}
       .form-info {
         margin-top: 17px;
         padding: 0;
@@ -938,12 +938,12 @@ xpopup
           }
 
           textarea {
-            height: 100px;
+            height: 80px;
             max-width: 100%;
             resize: none;
 
             @include min-width(1025px) {
-              height: 150px;
+              height: 100px;
             }
           }
           .form-info {
