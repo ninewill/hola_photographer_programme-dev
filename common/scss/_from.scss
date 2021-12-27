@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import './utils/_utils.scss';
+@import "./utils/_utils.scss";
 
 .img-replace {
   /* replace text with an image */
@@ -172,7 +172,7 @@ xpopup
     background-color: $color-white;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       width: 44px;
       height: 17px;
@@ -180,7 +180,7 @@ xpopup
       left: 50%;
       top: 24px;
       margin-left: -22px;
-      background: url('../images/icon/item_black-m.svg') no-repeat
+      background: url("../images/icon/item_black-m.svg") no-repeat
         center/contain;
     }
 
@@ -204,7 +204,7 @@ xpopup
       padding-left: 44px;
 
       &:before {
-        content: '';
+        content: "";
         display: block;
         width: 512px;
         height: 65px;
@@ -212,20 +212,28 @@ xpopup
         left: 9px;
         bottom: -6px;
         margin-left: 0;
-        background: url('../images/icon/cd-popup-container-title-line.svg')
+        background: url("../images/icon/cd-popup-container-title-line.svg")
           no-repeat center/contain;
       }
 
       > h3 {
-        font-size: 32px;
-        text-align: left;
-        @include NotoSansTC-txt;
+				font-size: 26px;
+				@include NotoSansTC-txt;
+
+				@include min-width(1025px) {
+					font-size: 32px;
+					text-align: left;
+				}
       }
       > h4 {
-        margin-top: 0.5rem;
         font-weight: 100;
-        font-size: 22px;
-        @include NotoSansTC-txt;
+    		font-size: 18px;
+
+				@include min-width(1025px) {
+					margin-top: 0.5rem;
+					font-size: 22px;
+					@include NotoSansTC-txt;
+				}
       }
     }
   }
@@ -241,34 +249,34 @@ xpopup
 
   @include min-width(1025px) {
     width: 45%;
-  height: 100%;
-  border: 1px solid #000;
-  padding: 22px;
-  position: relative;
+    height: 100%;
+    border: 1px solid #000;
+    padding: 22px;
+    position: relative;
   }
 
   .cd-popup-from-line-top {
     width: 100%;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 10px;
       left: 10px;
       width: 30px;
       height: 30px;
-      background: url('../images/icon/l-icon-1.png') no-repeat center/contain;
+      background: url("../images/icon/l-icon-1.png") no-repeat center/contain;
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 10px;
       right: 10px;
       width: 30px;
       height: 30px;
-      background: url('../images/icon/l-icon-2.png') no-repeat center/contain;
+      background: url("../images/icon/l-icon-2.png") no-repeat center/contain;
     }
   }
 
@@ -276,36 +284,46 @@ xpopup
     width: 100%;
 
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 10px;
       left: 10px;
       width: 30px;
       height: 30px;
-      background: url('../images/icon/l-icon-4.png') no-repeat center/contain;
+      background: url("../images/icon/l-icon-4.png") no-repeat center/contain;
     }
     &:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       bottom: 10px;
       right: 10px;
       width: 30px;
       height: 30px;
-      background: url('../images/icon/l-icon-3.png') no-repeat center/contain;
+      background: url("../images/icon/l-icon-3.png") no-repeat center/contain;
     }
   }
 
-  > h3 {
-    font-size: 26px;
-    @include NotoSansTC-txt;
-  }
-  > h4 {
-    font-weight: 100;
-    font-size: 18px;
-    @include NotoSansTC-txt;
-  }
+	> h3 {
+		font-size: 18px;
+		@include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			font-size: 26px;
+		}
+	}
+	> h4 {
+		margin-top: 0.5rem;
+		font-weight: 100;
+		font-size: 14px;
+		@include NotoSansTC-txt;
+
+		@include min-width(1025px) {
+			margin-top: 0;
+			font-size: 18px;
+		}
+	}
 
   .checkbox-wrap {
     @include min-width(1025px) {
@@ -324,7 +342,11 @@ xpopup
       position: relative;
 
       > li {
-        margin-right: 1rem;
+        margin-right: 0.25rem;
+
+        @include min-width(376px) {
+          margin-right: 0.5rem;
+        }
       }
 
       .styled-checkbox {
@@ -345,8 +367,8 @@ xpopup
         }
 
         & + label:before {
-          content: '';
-          margin-right: 10px;
+          content: "";
+          margin-right: 5px;
           display: inline-block;
           vertical-align: text-top;
           width: 12px;
@@ -357,6 +379,7 @@ xpopup
           @include min-width(1025px) {
             width: 15px;
             height: 15px;
+            margin-right: 10px;
           }
         }
 
@@ -402,7 +425,7 @@ xpopup
       }
 
       & + label:before {
-        content: '';
+        content: "";
         margin-right: 10px;
         display: inline-block;
         vertical-align: text-top;
@@ -434,21 +457,31 @@ xpopup
 
     #contact-form {
       input::placeholder,
+      select,
       textarea::placeholder {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 100;
         @include NotoSansTC-txt;
         color: $color-black;
+
+        @include min-width(1025px) {
+          font-weight: 300;
+          font-size: 16px;
+        }
       }
-      input[type='text'],
-      input[type='email'],
-      input[type='tel'],
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
       textarea,
       select {
         width: 100%;
         background-color: #f2f2f1;
         margin: 0 0 12px;
-        padding: 14px 15px;
+        padding: 10px;
+
+        @include min-width(1025px) {
+          padding: 14px 15px;
+        }
       }
 
       input:focus,
@@ -458,9 +491,13 @@ xpopup
       }
 
       textarea {
-        height: 150px;
+        height: 100px;
         max-width: 100%;
         resize: none;
+
+        @include min-width(1025px) {
+          height: 150px;
+        }
       }
       .form-info {
         margin-top: 17px;
@@ -471,10 +508,16 @@ xpopup
       }
 
       .submit-btn {
-        position: absolute;
-        left: 50%;
-        bottom: -20px;
-        margin-left: -80px;
+        position: static;
+        margin: 0 auto;
+        margin-top: 16px;
+
+        @include min-width(1025px) {
+          position: absolute;
+          left: 50%;
+          bottom: -20px;
+          margin-left: -80px;
+        }
       }
 
       .select-form {
@@ -491,10 +534,14 @@ xpopup
 
       #contact-submit {
         padding: 7px 44px;
-        font-size: 18px;
+        font-size: 13px;
         color: $color-white;
         background-color: #4d4d4d;
         @include NotoSansTC-txt;
+
+        @include min-width(1025px) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -504,7 +551,7 @@ xpopup
   padding: 3em 1em;
 }
 .cd-popup-container .cd-buttons:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -524,14 +571,22 @@ xpopup
 
 .cd-popup-container .cd-popup-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 17px;
+  right: 17px;
   width: 30px;
   height: 30px;
+
+  @include min-width(1025px) {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+  }
 }
 .cd-popup-container .cd-popup-close::before,
 .cd-popup-container .cd-popup-close::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 16px;
   left: -1px;
@@ -605,7 +660,7 @@ xpopup
         background-color: $color-white;
 
         &:before {
-          content: '';
+          content: "";
           display: block;
           width: 44px;
           height: 17px;
@@ -613,7 +668,7 @@ xpopup
           left: 50%;
           top: 24px;
           margin-left: -22px;
-          background: url('../images/icon/item_black-m.svg') no-repeat
+          background: url("../images/icon/item_black-m.svg") no-repeat
             center/contain;
         }
 
@@ -632,36 +687,44 @@ xpopup
     }
 
     > .cd-popup-container-from {
-      width: 100%;
-      height: 700px;
-      border: 1px solid #000;
-      padding: 22px;
-      position: relative;
-      background-color: $color-white;
+			width: 100%;
+			height: 700px;
+			border: 1px solid #000;
+			padding: 22px;
+			position: relative;
+			background-color: $color-white;
+		
+			@include min-width(1025px) {
+				width: 45%;
+				height: 100%;
+				border: 1px solid #000;
+				padding: 22px;
+				position: relative;
+			}
 
       .cd-popup-from-line-top {
         width: 100%;
 
         &:before {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           top: 10px;
           left: 10px;
           width: 30px;
           height: 30px;
-          background: url('../images/icon/l-icon-1.png') no-repeat
+          background: url("../images/icon/l-icon-1.png") no-repeat
             center/contain;
         }
         &:after {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           top: 10px;
           right: 10px;
           width: 30px;
           height: 30px;
-          background: url('../images/icon/l-icon-2.png') no-repeat
+          background: url("../images/icon/l-icon-2.png") no-repeat
             center/contain;
         }
       }
@@ -670,25 +733,25 @@ xpopup
         width: 100%;
 
         &:before {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           bottom: 10px;
           left: 10px;
           width: 30px;
           height: 30px;
-          background: url('../images/icon/l-icon-4.png') no-repeat
+          background: url("../images/icon/l-icon-4.png") no-repeat
             center/contain;
         }
         &:after {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           bottom: 10px;
           right: 10px;
           width: 30px;
           height: 30px;
-          background: url('../images/icon/l-icon-3.png') no-repeat
+          background: url("../images/icon/l-icon-3.png") no-repeat
             center/contain;
         }
       }
@@ -756,7 +819,7 @@ xpopup
             }
 
             & + label:before {
-              content: '';
+              content: "";
               margin-right: 5px;
               display: inline-block;
               vertical-align: text-top;
@@ -768,6 +831,7 @@ xpopup
               @include min-width(1025px) {
                 width: 15px;
                 height: 15px;
+                margin-right: 10px;
               }
             }
 
@@ -808,7 +872,7 @@ xpopup
           }
 
           & + label:before {
-            content: '';
+            content: "";
             margin-right: 10px;
             display: inline-block;
             vertical-align: text-top;
@@ -852,9 +916,9 @@ xpopup
               font-size: 16px;
             }
           }
-          input[type='text'],
-          input[type='email'],
-          input[type='tel'],
+          input[type="text"],
+          input[type="email"],
+          input[type="tel"],
           textarea,
           select {
             width: 100%;
@@ -942,7 +1006,7 @@ xpopup
 }
 .cd-popup-container-mobile .cd-popup-close-mobile::before,
 .cd-popup-container-mobile .cd-popup-close-mobile::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 16px;
   left: -1px;
