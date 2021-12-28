@@ -310,16 +310,16 @@
 			font-size: 28px;
 		}
 
-    &:before {
-			@include min-width(1025px) {
-				content: "";
-				width: 187px;
-				height: 15px;
-				display: block;
-				position: absolute;
-				background: url("../images/icon/focus-s.svg") no-repeat center/contain;
-			}
-    }
+    //&:before {
+		//	@include min-width(1025px) {
+		//		content: "";
+		//		width: 187px;
+		//		height: 15px;
+		//		display: block;
+		//		position: absolute;
+		//		background: url("../images/icon/focus-s.svg") no-repeat center/contain;
+		//	}
+    //}
   }
 
   p {

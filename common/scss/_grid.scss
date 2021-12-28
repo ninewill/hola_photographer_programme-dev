@@ -2039,8 +2039,7 @@
 
       @include min-width(1025px) {
         display: flex;
-        height: calc(100vh - 153px);
-        margin-top: 0;
+        margin-top: 50px;
         padding-left: 12px;
         justify-content: space-around;
         flex-direction: column;
@@ -2054,7 +2053,7 @@
 
         @include min-width(1025px) {
           width: 238px;
-          height: 163px;
+          height: auto;
           display: block;
           margin-right: 0;
           margin-bottom: 20px;
