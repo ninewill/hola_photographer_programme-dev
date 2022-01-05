@@ -2803,19 +2803,17 @@
       display: none;
 
       @include min-width(1025px) {
-        height: calc(100vh - 153px);
-        margin-top: 0;
+        //height: calc(100vh - 153px);
+				display: block;
+        margin-top: 40px;
         padding-left: 12px;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
       }
 
       > li {
         position: relative;
         width: 238px;
         height: 163px;
-        margin-bottom: 20px;
+				margin-bottom: 72px;
 
         > a {
           > figure {
