@@ -294,6 +294,10 @@ xpopup
       width: 30px;
       height: 30px;
       background: url("../images/icon/l-icon-4.png") no-repeat center/contain;
+
+			@include min-width(1025px) {
+				bottom: -135px;
+			}
     }
     &:after {
       content: "";
@@ -304,6 +308,10 @@ xpopup
       width: 30px;
       height: 30px;
       background: url("../images/icon/l-icon-3.png") no-repeat center/contain;
+
+			@include min-width(1025px) {
+				bottom: -135px;
+			}
     }
   }
 
